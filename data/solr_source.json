@@ -1,0 +1,57 @@
+{
+  "id": "solr_classic_standalone_server",
+  "created": "2026-01-21T18:20:16.718Z",
+  "modified": "2026-01-21T18:20:16.718Z",
+  "connector": "lucid.solr",
+  "type": "solr",
+  "description": "Connector to Standalone Server",
+  "pipeline": "udi2",
+  "properties": {
+    "collection": "udi2",
+    "commit_on_finish": true,
+    "initial_mapping": {
+      "id": "b40c8db2-9498-4246-9a7c-f3e4104511a5",
+      "reservedFieldsMappingAllowed": false,
+      "retentionMappings": [
+        {
+          "field": "f1",
+          "operation": "delete"
+        }
+      ],
+      "skip": false,
+      "translationMappings": [
+        {
+          "operation": "move",
+          "source": "_version_",
+          "target": "external_version_s"
+        }
+      ],
+      "type": "field-mapping",
+      "unmappedRule": {
+        "delete": false,
+        "fieldToCopyValuesTo": "",
+        "fieldToMoveValuesTo": "",
+        "keep": true,
+        "valueToAddToUnmappedFields": "",
+        "valueToSetOnUnmappedFields": ""
+      },
+      "updateMappings": [
+        {
+          "field": "f2",
+          "operation": "add",
+          "value": "foo"
+        }
+      ]
+    },
+    "solr_base_url": "http://solr",
+    "solr_field_list": "*",
+    "solr_filter_queries": "q1,q2",
+    "solr_page_size": 100,
+    "solr_query": "*:*",
+    "solr_query_parser": "someParser",
+    "solr_request_handler": "/select",
+    "solr_sort_spec": "id asc",
+    "source_collection": "collection1",
+    "verify_access": true
+  }
+}
