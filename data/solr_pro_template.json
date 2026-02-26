@@ -1,0 +1,31 @@
+{
+  "pipeline": "somePipeline",
+  "connector": "lucidworks.solr",
+  "parserId": "someParser",
+  "coreProperties": {},
+  "id": "solr1",
+  "type": "lucidworks.solr",
+  "properties": {
+    "query": {
+      "filterQueries": [],
+      "requestHandler": "/select",
+      "query": "*:*",
+      "batchSize": 500
+    },
+    "connection": {
+      "collection": "someSourceCollection",
+      "connectionType": "SOLRCLOUD"
+    },
+    "advancedConnection": {
+      "connectionTimeoutMs": 10000,
+      "socketTimeoutMs": 30000,
+      "maxConnectionsPerHost": 20
+    },
+    "collection": "someCollection",
+    "advancedQuery": {
+      "queryTimeoutMs": 30000,
+      "maxDocuments": 0,
+      "useCursorMark": true
+    }
+  }
+}
