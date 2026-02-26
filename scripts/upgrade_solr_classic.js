@@ -52,5 +52,5 @@ function isValidString(obj, key) {
       splitted = source_connector.properties.solr_filter_queries.split(/(?<!\\),/);
       target_connector.properties.query.filterQueries = splitted;
     }
-    return JSON.stringify(target_connector, null, 2);
+    return JSON.stringify(target_connector);
 }
